@@ -1,0 +1,65 @@
+{
+  "name": "LLB Workflow D: Booking Status Update",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "booking-status-update",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "node-webhook-status-update",
+      "name": "Webhook: Status Update",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [220, 300]
+    },
+    {
+      "parameters": {
+        "functionCode": "const data = items[0].json;\nreturn [{\n  json: {\n    bookingId: data.bookingId,\n    bookingReference: data.bookingReference,\n    previousStatus: data.previousStatus,\n    newStatus: data.newStatus,\n    propertyTitle: data.propertyTitle,\n    plotUnit: data.plotUnit,\n    userName: data.userName,\n    userEmail: data.userEmail,\n    adminNotes: data.adminNotes || 'Status updated by LLB Operations Team.',\n    updatedAt: data.updatedAt || new Date().toISOString()\n  }\n}];"
+      },
+      "id": "node-fn-status-format",
+      "name": "Format Status Notification",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [440, 300]
+    },
+    {
+      "parameters": {
+        "fromEmail": "concierge@llbrealestate.com",
+        "toEmail": "={{$json.userEmail}}",
+        "subject": "=[LLB Real Estate] Status Updated: Docket #{{$json.bookingReference}} is now {{$json.newStatus}}",
+        "html": "<div style='font-family: Arial, sans-serif; background: #ffffff; color: #0a0a0a; padding: 32px;'>\n  <h2>Docket Status Notification</h2>\n  <p>Dear <strong>{{$json.userName}}</strong>,</p>\n  <p>Your booking request for <strong>{{$json.propertyTitle}} ({{$json.plotUnit}})</strong> has been updated.</p>\n  <div style='background: #f8fafc; border: 1px solid #e2e8f0; padding: 16px; border-radius: 8px; margin: 16px 0;'>\n    <p><strong>Booking Reference:</strong> {{$json.bookingReference}}</p>\n    <p><strong>Previous Status:</strong> {{$json.previousStatus}}</p>\n    <p><strong>New Status:</strong> <strong style='color: #000; text-transform: uppercase;'>{{$json.newStatus}}</strong></p>\n    <p><strong>Advisor Remarks:</strong> {{$json.adminNotes}}</p>\n  </div>\n  <p>You can track real-time status under the 'My Bookings' tab in your LLB Real Estate mobile application.</p>\n</div>"
+      },
+      "id": "node-email-status",
+      "name": "Send Status Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [680, 300]
+    }
+  ],
+  "connections": {
+    "Webhook: Status Update": {
+      "main": [
+        [
+          {
+            "node": "Format Status Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Status Notification": {
+      "main": [
+        [
+          {
+            "node": "Send Status Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

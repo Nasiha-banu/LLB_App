@@ -1,0 +1,65 @@
+{
+  "name": "LLB Workflow E: Site Visit 24h Reminder & Follow-up",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "site-visit-followup",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "node-webhook-followup",
+      "name": "Webhook: Site Visit Reminder",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [220, 300]
+    },
+    {
+      "parameters": {
+        "functionCode": "const data = items[0].json;\nreturn [{\n  json: {\n    bookingId: data.bookingId,\n    bookingReference: data.bookingReference,\n    propertyTitle: data.propertyTitle,\n    propertyLocation: data.propertyLocation,\n    userName: data.userName,\n    userEmail: data.userEmail,\n    userPhone: data.userPhone,\n    siteVisitDate: data.siteVisitDate,\n    siteVisitTime: data.siteVisitTime,\n    officeContact: data.officeContact || '+91 98840 99881'\n  }\n}];"
+      },
+      "id": "node-fn-format-reminder",
+      "name": "Format Reminder",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [440, 300]
+    },
+    {
+      "parameters": {
+        "fromEmail": "concierge@llbrealestate.com",
+        "toEmail": "={{$json.userEmail}}",
+        "subject": "=[LLB Real Estate] Site Inspection Reminder: Tomorrow at {{$json.siteVisitTime}}",
+        "html": "<div style='font-family: Arial, sans-serif; background: #ffffff; color: #0a0a0a; padding: 32px;'>\n  <h2>Inspection Appointment Reminder</h2>\n  <p>Dear <strong>{{$json.userName}}</strong>,</p>\n  <p>This is a courtesy reminder for your scheduled plot inspection tomorrow.</p>\n  <div style='background: #f8fafc; border: 1px solid #e2e8f0; padding: 16px; border-radius: 8px; margin: 16px 0;'>\n    <p><strong>Property:</strong> {{$json.propertyTitle}}</p>\n    <p><strong>Location:</strong> {{$json.propertyLocation}}</p>\n    <p><strong>Inspection Slot:</strong> {{$json.siteVisitDate}} at {{$json.siteVisitTime}}</p>\n    <p><strong>Concierge Contact:</strong> {{$json.officeContact}}</p>\n  </div>\n  <p>Our executive will coordinate with you 1 hour prior to departure. Please let us know if you need to reschedule.</p>\n</div>"
+      },
+      "id": "node-email-reminder",
+      "name": "Send Reminder Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [680, 300]
+    }
+  ],
+  "connections": {
+    "Webhook: Site Visit Reminder": {
+      "main": [
+        [
+          {
+            "node": "Format Reminder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Reminder": {
+      "main": [
+        [
+          {
+            "node": "Send Reminder Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

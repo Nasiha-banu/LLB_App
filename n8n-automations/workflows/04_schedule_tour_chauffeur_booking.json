@@ -1,0 +1,86 @@
+{
+  "name": "04_LLB_Schedule_Tour_Chauffeur_Booking",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "schedule-tour",
+        "responseMode": "onReceived",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "name": "Webhook: Tour Requested",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.body.requireChauffeur }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "name": "Check Chauffeur Required",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "chatId": "-100188223344",
+        "text": "=🚗 *VIP CHAUFFEUR DISPATCH ASSIGNMENT*\n━━━━━━━━━━━━━━━━━━━━\n👤 Client: {{ $json.body.clientName }}\n📍 Pickup: {{ $json.body.pickupAddress || 'Residence / Airport' }}\n📅 Date: {{ $json.body.scheduledDate }} at {{ $json.body.scheduledTime }}\n🏰 Destination: {{ $json.body.propertyTitle }}\n🎫 Gate Pass: {{ $json.body.gatePassCode }}\n━━━━━━━━━━━━━━━━━━━━\nVehicle: Mercedes-Benz S-Class Fleet"
+      },
+      "name": "Dispatch Chauffeur Fleet",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [700, 200]
+    },
+    {
+      "parameters": {
+        "calendar": "VIP Site Tours",
+        "start": "={{ $json.body.scheduledDate }}T{{ $json.body.scheduledTime }}",
+        "summary": "=Private Inspection: {{ $json.body.propertyTitle }}",
+        "description": "=VIP Site Visit for {{ $json.body.clientName }}. Gate Pass: {{ $json.body.gatePassCode }}. Chauffeur: {{ $json.body.requireChauffeur ? 'Mercedes S-Class' : 'Self-Drive' }}."
+      },
+      "name": "Create Google Calendar Event",
+      "type": "n8n-nodes-base.googleCalendar",
+      "typeVersion": 1,
+      "position": [700, 400]
+    }
+  ],
+  "connections": {
+    "Webhook: Tour Requested": {
+      "main": [
+        [
+          {
+            "node": "Check Chauffeur Required",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Create Google Calendar Event",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Chauffeur Required": {
+      "main": [
+        [
+          {
+            "node": "Dispatch Chauffeur Fleet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true
+}

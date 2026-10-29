@@ -1,0 +1,405 @@
+[
+  {
+    "id": "LLB-PRD-01",
+    "title": "Parandur Airport City Phase 1",
+    "subtitle": "DTCP & TN RERA Approved Gated Layout",
+    "category": "Residential Plots",
+    "type": "plot",
+    "location": "Parandur Airport North Gate Corridor, Kanchipuram - 631552",
+    "microMarket": "Parandur Airport Corridor",
+    "coordinates": {
+      "lat": 12.9885,
+      "lng": 79.7642
+    },
+    "distanceToAirport": "3.2 km to Proposed Terminal 1",
+    "areaSqFt": 1500,
+    "areaCents": 3.44,
+    "pricePerSqFt": 1450,
+    "totalPrice": "₹21,75,000",
+    "priceNumeric": 2175000,
+    "featured": true,
+    "status": "Available",
+    "approvalAuthority": "DTCP & TN RERA Approved",
+    "reraNumber": "TN/RERA/0412/2025",
+    "dtcpNumber": "DTCP/KPM/182/2024",
+    "roadWidth": "40 Ft Blacktop Road",
+    "facing": "North-East (Vaastu Compliant)",
+    "groundWater": "Sweet Potable Water at 32 Ft",
+    "electricity": "Dedicated 3-Phase Transformer & EB Lines",
+    "availablePlots": 14,
+    "totalPlots": 36,
+    "plotsList": ["Plot #04", "Plot #07", "Plot #11", "Plot #15", "Plot #18", "Plot #22", "Plot #28", "Plot #31"],
+    "description": "Exclusive gated plot development strategically positioned along the proposed 6-lane Parandur Airport Express Link. Unmatched appreciation potential with direct highway access, sweet groundwater, clear titles verified for 30 years, and DTCP sanction.",
+    "amenities": [
+      "40 Ft & 30 Ft Blacktop Avenue Roads",
+      "Gated Community with 24/7 Security Arch",
+      "Underground Drainage & Water Pipelines",
+      "Solar Street Lighting with LED Fixtures",
+      "Avenue Tree Plantation & Landscaped Parks",
+      "Sweet Groundwater at Shallow Depth",
+      "Clear 30-Year Encumbrance Free Title"
+    ],
+    "documents": [
+      "DTCP Approved Layout Plan (L.P. No. 182/2024)",
+      "TN RERA Registration Certificate",
+      "30-Year Nil-Encumbrance Certificate (EC)",
+      "High Court Advocate Legal Title Opinion",
+      "Combined FMB Sketch & Revenue Patta"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&auto=format&fit=crop&q=80"
+    ]
+  },
+  {
+    "id": "LLB-PRD-02",
+    "title": "Sunguvarchatram Logistics & Commercial Acreage",
+    "subtitle": "Prime Expressway Facing Industrial/Commercial Parcel",
+    "category": "Commercial Land",
+    "type": "land",
+    "location": "Sunguvarchatram Industrial Hub, Chennai-Bengaluru NH-48 Corridor",
+    "microMarket": "Sunguvarchatram Corridor",
+    "coordinates": {
+      "lat": 12.9554,
+      "lng": 79.8421
+    },
+    "distanceToAirport": "9.5 km via 4-Lane Link",
+    "areaSqFt": 43560,
+    "areaCents": 100.0,
+    "pricePerSqFt": 950,
+    "totalPrice": "₹4.13 Cr",
+    "priceNumeric": 41382000,
+    "featured": true,
+    "status": "Available",
+    "approvalAuthority": "DTCP Industrial Conversion Feasible",
+    "reraNumber": "Exempt / Land Parcel",
+    "dtcpNumber": "DTCP/ZONING/IND-44/2024",
+    "roadWidth": "100 Ft National Highway Service Road",
+    "facing": "East Facing",
+    "groundWater": "High Yield Borewell (45 Ft)",
+    "electricity": "HT Power Line Feasibility Approved",
+    "availablePlots": 1,
+    "totalPlots": 1,
+    "plotsList": ["Parcel A - 1.00 Acre"],
+    "description": "1.00 Acre (100 Cents) prime commercial land parcel on the high-velocity Chennai-Bengaluru Industrial Corridor. Directly accessible from the NH-48 service lane and connecting directly to Parandur Airport South entrance. Ideal for warehouses, logistics hubs, or commercial complexes.",
+    "amenities": [
+      "100 Ft NH-48 Service Road Access",
+      "High Tension (HT) Power Feasibility",
+      "Heavy Vehicle Container Movement Ready",
+      "High Ground Level with Zero Inundation",
+      "Compound Wall Fencing Completed",
+      "Direct Link to SIPCOT Industrial Parks"
+    ],
+    "documents": [
+      "Clean Revenue Patta & A-Register Extract",
+      "Topographical Contour Survey Map",
+      "30-Year Encumbrance Search Report",
+      "NHAI Highway Access Feasibility NOC"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&auto=format&fit=crop&q=80"
+    ]
+  },
+  {
+    "id": "LLB-PRD-03",
+    "title": "Thandalam Junction Greenfield Villa Enclave",
+    "subtitle": "Gated Villa Community near Education & Airport Corridor",
+    "category": "Villa Community Plot",
+    "type": "plot",
+    "location": "Thandalam-Parandur Link Road, Near Saveetha Nagar",
+    "microMarket": "Thandalam Corridor",
+    "coordinates": {
+      "lat": 13.0182,
+      "lng": 79.9863
+    },
+    "distanceToAirport": "14.0 km via Expressway",
+    "areaSqFt": 1800,
+    "areaCents": 4.13,
+    "pricePerSqFt": 1850,
+    "totalPrice": "₹33,30,000",
+    "priceNumeric": 3330000,
+    "featured": true,
+    "status": "Available",
+    "approvalAuthority": "CMDA / DTCP Sanctioned",
+    "reraNumber": "TN/RERA/0921/2024",
+    "dtcpNumber": "DTCP/CMDA/TH-88/2024",
+    "roadWidth": "30 Ft Tar Road",
+    "facing": "North Facing (100% Vaastu)",
+    "groundWater": "Mineral Potable Groundwater at 28 Ft",
+    "electricity": "Underground Cabling & Transformer",
+    "availablePlots": 8,
+    "totalPlots": 24,
+    "plotsList": ["Plot #02", "Plot #05", "Plot #09", "Plot #14", "Plot #19", "Plot #21"],
+    "description": "Ready-to-build luxury villa plots in a rapidly expanding educational and residential enclave. Minutes away from top engineering and medical colleges, with smooth connectivity toward Parandur International Airport.",
+    "amenities": [
+      "Gated Township with Boom Barrier & CCTV",
+      "30 Ft Tarred Avenue with Kerbstones",
+      "Children Play Area & Open Green Park",
+      "Individual Water Tap Connection Point",
+      "Underground Drainage Lines Laid",
+      "Bank Loan Pre-Approved by SBI & HDFC"
+    ],
+    "documents": [
+      "CMDA & DTCP Approved Master Plan",
+      "TN RERA Final Sanction Order",
+      "NOC from Public Works Department (PWD)",
+      "Bank Legal Due Diligence Approval Letter"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=1200&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&auto=format&fit=crop&q=80"
+    ]
+  },
+  {
+    "id": "LLB-PRD-04",
+    "title": "Edayarpakkam Green Acres Residential Plots",
+    "subtitle": "Affordable High-Growth Plots Near Airport Zone",
+    "category": "Residential Plots",
+    "type": "plot",
+    "location": "Edayarpakkam Village Road, Parandur Zone, Kanchipuram - 631553",
+    "microMarket": "Parandur Airport Corridor",
+    "coordinates": {
+      "lat": 12.9421,
+      "lng": 79.7915
+    },
+    "distanceToAirport": "5.5 km to Proposed Airport South Gate",
+    "areaSqFt": 1200,
+    "areaCents": 2.75,
+    "pricePerSqFt": 1150,
+    "totalPrice": "₹13,80,000",
+    "priceNumeric": 1380000,
+    "featured": false,
+    "status": "Available",
+    "approvalAuthority": "DTCP Approved",
+    "reraNumber": "TN/RERA/0335/2025",
+    "dtcpNumber": "DTCP/KPM/91/2025",
+    "roadWidth": "30 Ft Blacktop Road",
+    "facing": "South-East / East",
+    "groundWater": "Natural Sweet Groundwater at 25 Ft",
+    "electricity": "Overhead EB Line Installed",
+    "availablePlots": 19,
+    "totalPlots": 40,
+    "plotsList": ["Plot #03", "Plot #06", "Plot #10", "Plot #12", "Plot #16", "Plot #20", "Plot #25", "Plot #33"],
+    "description": "Exceptional value investment opportunity situated just 5.5 km from the Parandur Airport boundary. Crystal clear parent titles, well-demarcated plots with corner stone boundary markers, and immediate registration.",
+    "amenities": [
+      "30 Ft Well-Graded Blacktop Roads",
+      "Perimeter Fencing Around Layout",
+      "Clear Plot Demarcation with Number Stones",
+      "Street Lights & Transformer Installed",
+      "Sweet Groundwater Reservoir",
+      "Instant Registration & Patta Transfer"
+    ],
+    "documents": [
+      "DTCP Approval Copy & Government Gazette",
+      "Parent Document Chain for 35 Years",
+      "Nil EC for 30 Years",
+      "Legal Opinion from Senior Counsel"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&auto=format&fit=crop&q=80"
+    ]
+  },
+  {
+    "id": "LLB-PRD-05",
+    "title": "Podavur Aero-View Gated Township",
+    "subtitle": "Premium DTCP & RERA Township with Avenue Plantations",
+    "category": "Residential Plots",
+    "type": "plot",
+    "location": "Podavur Main Road, Parandur West Corridor - 631552",
+    "microMarket": "Parandur Airport Corridor",
+    "coordinates": {
+      "lat": 12.9712,
+      "lng": 79.7289
+    },
+    "distanceToAirport": "4.8 km to Parandur West Access Road",
+    "areaSqFt": 2400,
+    "areaCents": 5.51,
+    "pricePerSqFt": 1550,
+    "totalPrice": "₹37,20,000",
+    "priceNumeric": 3720000,
+    "featured": true,
+    "status": "Available",
+    "approvalAuthority": "DTCP & TN RERA Approved",
+    "reraNumber": "TN/RERA/0762/2025",
+    "dtcpNumber": "DTCP/KPM/224/2024",
+    "roadWidth": "40 Ft & 33 Ft Blacktop Avenue",
+    "facing": "North Facing",
+    "groundWater": "Potable Water at 30 Ft",
+    "electricity": "3-Phase EB Line with Streetlights",
+    "availablePlots": 11,
+    "totalPlots": 30,
+    "plotsList": ["Plot #08", "Plot #13", "Plot #17", "Plot #23", "Plot #27"],
+    "description": "Full Ground (2,400 sq.ft) plots in an ultra-clean master-planned community. Beautiful teak and fruit tree avenue plantations, arch entrance with guard booth, and direct connectivity to Kanchipuram town and Parandur Airport.",
+    "amenities": [
+      "Grand Entrance Arch with Security Cabin",
+      "40 Ft Wide Avenue Roads with Trees",
+      "Dedicated Park & Children Play Zone",
+      "Solar Powered Automatic Street Lamps",
+      "Individual Water Supply Pipe Connections",
+      "100% Vaastu Compliant Plot Orientations"
+    ],
+    "documents": [
+      "DTCP Approved Drawing No. 224/2024",
+      "TN RERA Sanction Certificate",
+      "Panchayat NOC & Resolution Copy",
+      "30-Year Encumbrance Certificate"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=1200&auto=format&fit=crop&q=80"
+    ]
+  },
+  {
+    "id": "LLB-PRD-06",
+    "title": "Nelvoy Express Agro & Investment Acreage",
+    "subtitle": "Managed Agro-Farmland on Expressway Spur",
+    "category": "Farmland Acreage",
+    "type": "land",
+    "location": "Nelvoy Village, Off Chennai-Bengaluru Expressway Corridor",
+    "microMarket": "Nelvoy Farmland Zone",
+    "coordinates": {
+      "lat": 12.9234,
+      "lng": 79.741
+    },
+    "distanceToAirport": "8.8 km to Airport Perimeter",
+    "areaSqFt": 87120,
+    "areaCents": 200.0,
+    "pricePerSqFt": 450,
+    "totalPrice": "₹3.92 Cr",
+    "priceNumeric": 39204000,
+    "featured": false,
+    "status": "Available",
+    "approvalAuthority": "Agricultural Land with Clear Patta",
+    "reraNumber": "Exempt / Farmland",
+    "dtcpNumber": "Revenue Patta / Clear Title",
+    "roadWidth": "30 Ft Blacktop Road",
+    "facing": "North-East",
+    "groundWater": "High Yield Open Farm Well + 2 Borewells",
+    "electricity": "Free Agricultural Power Connection (Free EB)",
+    "availablePlots": 1,
+    "totalPlots": 1,
+    "plotsList": ["Farm Unit A - 2.00 Acres"],
+    "description": "2.00 Acres (200 Cents) fertile agro-farmland featuring existing coconut, mango, and teak plantation. Equipped with open irrigation well, free farm electricity service, barbed wire fencing, and farm caretaker cottage. Ideal for agro-tourism or long-term capital appreciation near Parandur.",
+    "amenities": [
+      "Gated Farm with Barbed Wire Fencing",
+      "Sweet Water Open Well & 2 Borewells",
+      "Free Agricultural Electricity Service",
+      "Existing Coconut & Teak Plantations",
+      "Tar Road Frontage with Tractor Access",
+      "Farm Manager House & Tool Storage"
+    ],
+    "documents": [
+      "Computerized Revenue Patta in Owner Name",
+      "30-Year Encumbrance Search",
+      "Chitta & Adangal Extracts",
+      "FMB Field Map Sketch"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&auto=format&fit=crop&q=80"
+    ]
+  },
+  {
+    "id": "LLB-PRD-07",
+    "title": "Kanchipuram Outer Ring Arterial Commercial Plot",
+    "subtitle": "High-Footfall Commercial Land for Showroom or Hotel",
+    "category": "Commercial Land",
+    "type": "land",
+    "location": "Kanchipuram Outer Ring Road, Near Parandur Junction - 631502",
+    "microMarket": "Kanchipuram Outer Ring",
+    "coordinates": {
+      "lat": 12.852,
+      "lng": 79.7215
+    },
+    "distanceToAirport": "12.5 km direct expressway",
+    "areaSqFt": 9600,
+    "areaCents": 22.04,
+    "pricePerSqFt": 2250,
+    "totalPrice": "₹2.16 Cr",
+    "priceNumeric": 21600000,
+    "featured": true,
+    "status": "Available",
+    "approvalAuthority": "DTCP Commercial Approval",
+    "reraNumber": "TN/RERA/0589/2024",
+    "dtcpNumber": "DTCP/KPM/COM-12/2024",
+    "roadWidth": "80 Ft Ring Road Frontage",
+    "facing": "North Facing",
+    "groundWater": "Borewell at 35 Ft",
+    "electricity": "Commercial 3-Phase Connection",
+    "availablePlots": 2,
+    "totalPlots": 4,
+    "plotsList": ["Commercial Unit 01", "Commercial Unit 02"],
+    "description": "4 Grounds (9,600 sq.ft) premier commercial plot with 120 feet frontage on the 80-ft Kanchipuram Outer Ring Road. Perfect for hotels, commercial showrooms, or logistics transit offices serving the Parandur airport belt.",
+    "amenities": [
+      "80 Ft Wide Ring Road Frontage",
+      "High Visibility Corner Location",
+      "Storm Water Drain Connected",
+      "3-Phase Commercial Electricity Line",
+      "Ready for Immediate Ground Breaking",
+      "Encumbrance-Free 30-Year Title Deed"
+    ],
+    "documents": [
+      "DTCP Commercial Sanction Order",
+      "TN RERA Approved Certificate",
+      "Highway Access Permission Letter",
+      "Legal Search Report by Senior Advocate"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&auto=format&fit=crop&q=80"
+    ]
+  },
+  {
+    "id": "LLB-PRD-08",
+    "title": "Sriperumbudur-Parandur High-Tech Logistics Parcel",
+    "subtitle": "Industrial & Warehousing Acreage in Global Auto Belt",
+    "category": "Commercial Land",
+    "type": "land",
+    "location": "Mevalurkuppam-Sriperumbudur Growth Zone, NH-48 Corridor",
+    "microMarket": "Sriperumbudur Corridor",
+    "coordinates": {
+      "lat": 13.0245,
+      "lng": 79.9452
+    },
+    "distanceToAirport": "16.2 km via 6-Lane Corridor",
+    "areaSqFt": 65340,
+    "areaCents": 150.0,
+    "pricePerSqFt": 1100,
+    "totalPrice": "₹7.18 Cr",
+    "priceNumeric": 71874000,
+    "featured": false,
+    "status": "Available",
+    "approvalAuthority": "Industrial Land Classification",
+    "reraNumber": "Exempt / Industrial",
+    "dtcpNumber": "DTCP/IND/SPB-301/2024",
+    "roadWidth": "60 Ft Road Access",
+    "facing": "East Facing",
+    "groundWater": "High Capacity Borewell",
+    "electricity": "Direct HT Line Feeder Station Nearby",
+    "availablePlots": 1,
+    "totalPlots": 1,
+    "plotsList": ["Parcel 1 - 1.50 Acres"],
+    "description": "1.50 Acres (150 Cents) high-grade industrial parcel located right in the heart of the Sriperumbudur-Parandur manufacturing belt (adjacent to Fortune 500 automotive and electronics clusters). Fully leveled, compound walled, and ready for warehouse or factory construction.",
+    "amenities": [
+      "60 Ft Multi-Axle Container Road Access",
+      "High Tension (HT) Power Feeder Access",
+      "Elevated Ground with Proper Flood Drainage",
+      "Existing Perimeter Brick Compound Wall",
+      "Proximity to SIPCOT Industrial Parks",
+      "Zero Legal Disputes, Single Family Title"
+    ],
+    "documents": [
+      "Revenue Patta & Chitta Extract",
+      "DTCP Industrial Feasibility Endorsement",
+      "30-Year Encumbrance Search",
+      "Senior Advocate Legal Certification"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&auto=format&fit=crop&q=80"
+    ]
+  }
+]

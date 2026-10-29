@@ -1,0 +1,634 @@
+[
+  {
+    "id": "9b2705db-d3b0-43bd-8646-816523f83f34",
+    "workflow": "BOOKING_CONFIRMATION",
+    "webhookPath": "booking-confirmation",
+    "targetUrl": "http://localhost:5678/webhook/booking-confirmation",
+    "timestamp": "2026-10-28T06:05:32.693Z",
+    "payload": {
+      "bookingId": "bk-3f795ee9",
+      "bookingReference": "LLB-PRD-2026-1121",
+      "type": "PLOT_BOOKING",
+      "propertyId": "LLB-PRD-01",
+      "propertyTitle": "Parandur Airport City Phase 1",
+      "propertyLocation": "Parandur Airport North Gate Corridor, Kanchipuram - 631552",
+      "plotUnit": "Plot #04",
+      "plotAreaSqFt": 1500,
+      "priceFormatted": "₹21,75,000",
+      "userName": "Nasiha Banu",
+      "userEmail": "nasiha2305@gmail.com",
+      "userPhone": "8248139192",
+      "siteVisitDate": "2026-11-02",
+      "siteVisitTime": "10:30 AM",
+      "notes": "",
+      "bookingStatus": "Pending",
+      "adminDashboardUrl": "https://llbrealestate.com/admin/bookings/bk-3f795ee9",
+      "submittedAt": "2026-10-28T06:05:26.115Z"
+    },
+    "status": "simulated_fallback",
+    "response": {
+      "success": true,
+      "workflowId": "n8n-wf-03-booking-confirmation",
+      "bookingReference": "LLB-PRD-2026-1121",
+      "customerEmailStatus": "Dispatched to nasiha2305@gmail.com",
+      "adminEmailStatus": "Alert sent to admin@llb.com (concierge@llbrealestate.com)",
+      "actionsExecuted": [
+        "Locked plot reservation request for Plot #04",
+        "Generated formal booking docket #LLB-PRD-2026-1121",
+        "Sent customer booking confirmation with inspection terms",
+        "Notified LLB Parandur Site Director via high-priority email alert",
+        "Reserved complimentary AC chauffeur inspection vehicle"
+      ]
+    },
+    "latencyMs": 3520,
+    "simulated": true,
+    "errorReason": "ECONNABORTED"
+  },
+  {
+    "id": "962f30d7-afb7-4e4e-b902-13eb05eb05ea",
+    "workflow": "BOOKING_CONFIRMATION",
+    "webhookPath": "booking-confirmation",
+    "targetUrl": "http://localhost:5678/webhook/booking-confirmation",
+    "timestamp": "2026-10-28T05:58:42.654Z",
+    "payload": {
+      "bookingId": "bk-3f597c35",
+      "bookingReference": "LLB-PRD-2026-7627",
+      "type": "PLOT_BOOKING",
+      "propertyId": "LLB-PRD-01",
+      "propertyTitle": "Parandur Airport City Phase 1",
+      "propertyLocation": "Parandur Airport North Gate Corridor, Kanchipuram - 631552",
+      "plotUnit": "Plot #04",
+      "plotAreaSqFt": 1500,
+      "priceFormatted": "₹21,75,000",
+      "userName": "Sundar Ramanathan",
+      "userEmail": "investor@llb.com",
+      "userPhone": "+91 94441 23456",
+      "siteVisitDate": "2026-11-02",
+      "siteVisitTime": "10:30 AM",
+      "notes": "",
+      "bookingStatus": "Pending",
+      "adminDashboardUrl": "https://llbrealestate.com/admin/bookings/bk-3f597c35",
+      "submittedAt": "2026-10-28T05:58:36.234Z"
+    },
+    "status": "simulated_fallback",
+    "response": {
+      "success": true,
+      "workflowId": "n8n-wf-03-booking-confirmation",
+      "bookingReference": "LLB-PRD-2026-7627",
+      "customerEmailStatus": "Dispatched to investor@llb.com",
+      "adminEmailStatus": "Alert sent to admin@llb.com (concierge@llbrealestate.com)",
+      "actionsExecuted": [
+        "Locked plot reservation request for Plot #04",
+        "Generated formal booking docket #LLB-PRD-2026-7627",
+        "Sent customer booking confirmation with inspection terms",
+        "Notified LLB Parandur Site Director via high-priority email alert",
+        "Reserved complimentary AC chauffeur inspection vehicle"
+      ]
+    },
+    "latencyMs": 3577,
+    "simulated": true,
+    "errorReason": "ECONNABORTED"
+  },
+  {
+    "id": "0716fa70-51a3-449c-b3a8-08ca1465961f",
+    "workflow": "BOOKING_CONFIRMATION",
+    "webhookPath": "booking-confirmation",
+    "targetUrl": "http://localhost:5678/webhook/booking-confirmation",
+    "timestamp": "2026-10-28T05:57:47.899Z",
+    "payload": {
+      "bookingId": "bk-b99aee82",
+      "bookingReference": "LLB-PRD-2026-3514",
+      "type": "PLOT_BOOKING",
+      "propertyId": "LLB-PRD-01",
+      "propertyTitle": "Parandur Airport City Phase 1",
+      "propertyLocation": "Parandur Airport North Gate Corridor, Kanchipuram - 631552",
+      "plotUnit": "Plot #04",
+      "plotAreaSqFt": 1500,
+      "priceFormatted": "₹21,75,000",
+      "userName": "Sundar Ramanathan",
+      "userEmail": "investor@llb.com",
+      "userPhone": "+91 94441 23456",
+      "siteVisitDate": "2026-11-02",
+      "siteVisitTime": "10:30 AM",
+      "notes": "",
+      "bookingStatus": "Pending",
+      "adminDashboardUrl": "https://llbrealestate.com/admin/bookings/bk-b99aee82",
+      "submittedAt": "2026-10-28T05:57:41.217Z"
+    },
+    "status": "simulated_fallback",
+    "response": {
+      "success": true,
+      "workflowId": "n8n-wf-03-booking-confirmation",
+      "bookingReference": "LLB-PRD-2026-3514",
+      "customerEmailStatus": "Dispatched to investor@llb.com",
+      "adminEmailStatus": "Alert sent to admin@llb.com (concierge@llbrealestate.com)",
+      "actionsExecuted": [
+        "Locked plot reservation request for Plot #04",
+        "Generated formal booking docket #LLB-PRD-2026-3514",
+        "Sent customer booking confirmation with inspection terms",
+        "Notified LLB Parandur Site Director via high-priority email alert",
+        "Reserved complimentary AC chauffeur inspection vehicle"
+      ]
+    },
+    "latencyMs": 3518,
+    "simulated": true,
+    "errorReason": "ECONNABORTED"
+  },
+  {
+    "id": "9e2d921e-9b5e-476c-b801-ea0ab5208d3f",
+    "workflow": "BOOKING_CONFIRMATION",
+    "webhookPath": "booking-confirmation",
+    "targetUrl": "http://localhost:5678/webhook/booking-confirmation",
+    "timestamp": "2026-10-28T05:56:41.011Z",
+    "payload": {
+      "bookingId": "bk-e32e84cb",
+      "bookingReference": "LLB-PRD-2026-5515",
+      "type": "PLOT_BOOKING",
+      "propertyId": "LLB-PRD-01",
+      "propertyTitle": "Parandur Airport City Phase 1",
+      "propertyLocation": "Parandur Airport North Gate Corridor, Kanchipuram - 631552",
+      "plotUnit": "Plot #04",
+      "plotAreaSqFt": 1500,
+      "priceFormatted": "₹21,75,000",
+      "userName": "Sundar Ramanathan",
+      "userEmail": "investor@llb.com",
+      "userPhone": "+91 94441 23456",
+      "siteVisitDate": "2026-11-02",
+      "siteVisitTime": "10:30 AM",
+      "notes": "",
+      "bookingStatus": "Pending",
+      "adminDashboardUrl": "https://llbrealestate.com/admin/bookings/bk-e32e84cb",
+      "submittedAt": "2026-10-28T05:56:33.105Z"
+    },
+    "status": "simulated_fallback",
+    "response": {
+      "success": true,
+      "workflowId": "n8n-wf-03-booking-confirmation",
+      "bookingReference": "LLB-PRD-2026-5515",
+      "customerEmailStatus": "Dispatched to investor@llb.com",
+      "adminEmailStatus": "Alert sent to admin@llb.com (concierge@llbrealestate.com)",
+      "actionsExecuted": [
+        "Locked plot reservation request for Plot #04",
+        "Generated formal booking docket #LLB-PRD-2026-5515",
+        "Sent customer booking confirmation with inspection terms",
+        "Notified LLB Parandur Site Director via high-priority email alert",
+        "Reserved complimentary AC chauffeur inspection vehicle"
+      ]
+    },
+    "latencyMs": 3510,
+    "simulated": true,
+    "errorReason": "ECONNABORTED"
+  },
+  {
+    "id": "e521ee89-1838-48cf-b126-6b199bbb1b68",
+    "workflow": "PROPERTY_ENQUIRY",
+    "webhookPath": "property-enquiry",
+    "targetUrl": "http://localhost:5678/webhook/property-enquiry",
+    "timestamp": "2026-10-28T05:45:14.951Z",
+    "payload": {
+      "inquiryId": "inq-951835e9",
+      "propertyId": "LLB-PRD-03",
+      "propertyTitle": "Thandalam Junction Greenfield Villa Enclave",
+      "propertyLocation": "Thandalam-Parandur Link Road, Near Saveetha Nagar",
+      "clientName": "Dr. S. Venkataraman",
+      "clientEmail": "dr.venkat@chennaiclinic.org",
+      "clientPhone": "+919444055667",
+      "message": "Need clarity on CMDA zoning and high court 30-year search report.",
+      "createdAt": "2026-10-28T05:45:08.537Z"
+    },
+    "status": "simulated_fallback",
+    "response": {
+      "success": true,
+      "workflow": "PROPERTY_ENQUIRY",
+      "dispatchedAt": "2026-10-28T05:45:18.470Z"
+    },
+    "latencyMs": 3519,
+    "simulated": true,
+    "errorReason": "ECONNABORTED"
+  },
+  {
+    "id": "6f2b5a24-4eba-4295-960b-332fadc7980e",
+    "workflow": "BOOKING_CONFIRMATION",
+    "webhookPath": "booking-confirmation",
+    "targetUrl": "http://localhost:5678/webhook/booking-confirmation",
+    "timestamp": "2026-10-28T05:45:08.521Z",
+    "payload": {
+      "bookingId": "bk-9832ff29",
+      "bookingReference": "LLB-PRD-2026-4705",
+      "type": "SITE_VISIT",
+      "propertyId": "LLB-PRD-02",
+      "propertyTitle": "Sunguvarchatram Logistics & Commercial Acreage",
+      "propertyLocation": "Sunguvarchatram Industrial Hub, Chennai-Bengaluru NH-48 Corridor",
+      "plotUnit": "Parcel A - 1.00 Acre",
+      "plotAreaSqFt": 43560,
+      "priceFormatted": "₹4.13 Cr",
+      "userName": "Anandhi Meenakshisundaram",
+      "userEmail": "anandhi.investor@gmail.com",
+      "userPhone": "+919884112233",
+      "siteVisitDate": "2026-11-05",
+      "siteVisitTime": "11:30 AM",
+      "notes": "Please pick up from Guindy Hilton Hotel.",
+      "bookingStatus": "Pending",
+      "adminDashboardUrl": "https://llbrealestate.com/admin/bookings/bk-9832ff29",
+      "submittedAt": "2026-10-28T05:45:01.904Z"
+    },
+    "status": "simulated_fallback",
+    "response": {
+      "success": true,
+      "workflowId": "n8n-wf-03-booking-confirmation",
+      "bookingReference": "LLB-PRD-2026-4705",
+      "customerEmailStatus": "Dispatched to anandhi.investor@gmail.com",
+      "adminEmailStatus": "Alert sent to admin@llb.com (concierge@llbrealestate.com)",
+      "actionsExecuted": [
+        "Locked plot reservation request for Parcel A - 1.00 Acre",
+        "Generated formal booking docket #LLB-PRD-2026-4705",
+        "Sent customer booking confirmation with inspection terms",
+        "Notified LLB Parandur Site Director via high-priority email alert",
+        "Reserved complimentary AC chauffeur inspection vehicle"
+      ]
+    },
+    "latencyMs": 3513,
+    "simulated": true,
+    "errorReason": "ECONNABORTED"
+  },
+  {
+    "id": "338839ab-3b1d-4ce5-bf99-f2b4b685f50d",
+    "workflow": "BOOKING_CONFIRMATION",
+    "webhookPath": "booking-confirmation",
+    "targetUrl": "http://localhost:5678/webhook/booking-confirmation",
+    "timestamp": "2026-10-28T05:45:01.866Z",
+    "payload": {
+      "bookingId": "bk-24d478e5",
+      "bookingReference": "LLB-PRD-2026-7594",
+      "type": "PLOT_BOOKING",
+      "propertyId": "LLB-PRD-01",
+      "propertyTitle": "Parandur Airport City Phase 1",
+      "propertyLocation": "Parandur Airport North Gate Corridor, Kanchipuram - 631552",
+      "plotUnit": "Plot #14 (AeroCity Phase 1)",
+      "plotAreaSqFt": 1500,
+      "priceFormatted": "₹21,75,000",
+      "userName": "Karthikeyan Soundararajan",
+      "userEmail": "karthik.parandur.investor@gmail.com",
+      "userPhone": "+919840234567",
+      "siteVisitDate": null,
+      "siteVisitTime": "10:00 AM",
+      "notes": "Interested in commercial frontage parcel near 60ft link road.",
+      "bookingStatus": "Pending",
+      "adminDashboardUrl": "https://llbrealestate.com/admin/bookings/bk-24d478e5",
+      "submittedAt": "2026-10-28T05:44:54.433Z"
+    },
+    "status": "simulated_fallback",
+    "response": {
+      "success": true,
+      "workflowId": "n8n-wf-03-booking-confirmation",
+      "bookingReference": "LLB-PRD-2026-7594",
+      "customerEmailStatus": "Dispatched to karthik.parandur.investor@gmail.com",
+      "adminEmailStatus": "Alert sent to admin@llb.com (concierge@llbrealestate.com)",
+      "actionsExecuted": [
+        "Locked plot reservation request for Plot #14 (AeroCity Phase 1)",
+        "Generated formal booking docket #LLB-PRD-2026-7594",
+        "Sent customer booking confirmation with inspection terms",
+        "Notified LLB Parandur Site Director via high-priority email alert",
+        "Reserved complimentary AC chauffeur inspection vehicle"
+      ]
+    },
+    "latencyMs": 3526,
+    "simulated": true,
+    "errorReason": "ECONNABORTED"
+  },
+  {
+    "id": "78106536-044e-44cf-9547-01b19785f88d",
+    "workflow": "USER_REGISTRATION",
+    "webhookPath": "user-registration",
+    "targetUrl": "http://localhost:5678/webhook/user-registration",
+    "timestamp": "2026-10-28T05:19:38.702Z",
+    "payload": {
+      "userId": "usr-3f4f2678",
+      "name": "Sivakumar Rajendran",
+      "email": "sivakumar.investor@parandur-lands.in",
+      "phone": "+919840192837",
+      "role": "CUSTOMER",
+      "registrationSource": "LLB Mobile App (iOS / Android)",
+      "registeredAt": "2026-10-28T05:19:38.700Z"
+    },
+    "status": "simulated_fallback",
+    "response": {
+      "success": true,
+      "workflowId": "n8n-wf-01-welcome",
+      "message": "Welcome package email dispatched to sivakumar.investor@parandur-lands.in",
+      "recipient": "sivakumar.investor@parandur-lands.in",
+      "actionsExecuted": [
+        "Validated client credentials and Indian mobile format",
+        "Formatted branded LLB Real Estate HTML welcome letter",
+        "Attached Parandur Greenfield Airport Growth Corridor Report PDF",
+        "Created CRM Investor profile and scheduled concierge outreach"
+      ]
+    },
+    "latencyMs": 3543,
+    "simulated": true,
+    "errorReason": "ECONNABORTED"
+  },
+  {
+    "id": "6c09d04a-bc0a-496d-b2d3-0a526802ffff",
+    "workflow": "BOOKING_CONFIRMATION",
+    "webhookPath": "booking-confirmation",
+    "targetUrl": "http://localhost:5678/webhook/booking-confirmation",
+    "timestamp": "2026-10-28T05:07:18.766Z",
+    "payload": {
+      "bookingId": "bk-d14fddb0",
+      "bookingReference": "LLB-PRD-2026-2143",
+      "type": "SITE_VISIT",
+      "propertyId": "LLB-PRD-02",
+      "propertyTitle": "Sunguvarchatram Logistics & Commercial Acreage",
+      "propertyLocation": "Sunguvarchatram Industrial Hub, Chennai-Bengaluru NH-48 Corridor",
+      "plotUnit": "Parcel A - 1.00 Acre",
+      "plotAreaSqFt": 43560,
+      "priceFormatted": "₹4.13 Cr",
+      "userName": "Nasiha Banu",
+      "userEmail": "nasiha2305@gmail.com",
+      "userPhone": "8248139192",
+      "siteVisitDate": "2026-11-02",
+      "siteVisitTime": "10:30 AM",
+      "notes": "",
+      "bookingStatus": "Pending",
+      "adminDashboardUrl": "https://llbrealestate.com/admin/bookings/bk-d14fddb0",
+      "submittedAt": "2026-10-28T05:07:18.764Z"
+    },
+    "status": "delivered_to_n8n",
+    "response": {
+      "code": 200,
+      "executionId": "n8n-exec-1793164038779-4294",
+      "workflow": "Workflow C: Property Booking Confirmation (Customer + Admin)",
+      "status": "SUCCESS",
+      "executedActions": [
+        "📋 Generated Booking Reference: #LLB-PRD-2026-2143",
+        "📧 Dispatched Customer Confirmation Email to nasiha2305@gmail.com for Sunguvarchatram Logistics & Commercial Acreage (Parcel A - 1.00 Acre)",
+        "🚨 Dispatched Admin Immediate Alert to admin@llb.com / Parandur Site Director",
+        "🚗 Reserved Complimentary AC Chauffeur Vehicle for 2026-11-02"
+      ],
+      "completedAt": "2026-10-28T05:07:18.779Z"
+    },
+    "latencyMs": 14,
+    "httpStatus": 200
+  },
+  {
+    "id": "46dc7349-f02c-4480-864c-1031c92d99a0",
+    "workflow": "BOOKING_CONFIRMATION",
+    "webhookPath": "booking-confirmation",
+    "targetUrl": "http://localhost:5678/webhook/booking-confirmation",
+    "timestamp": "2026-10-28T05:06:54.248Z",
+    "payload": {
+      "bookingId": "bk-914fad55",
+      "bookingReference": "LLB-PRD-2026-6320",
+      "type": "PLOT_BOOKING",
+      "propertyId": "LLB-PRD-02",
+      "propertyTitle": "Sunguvarchatram Logistics & Commercial Acreage",
+      "propertyLocation": "Sunguvarchatram Industrial Hub, Chennai-Bengaluru NH-48 Corridor",
+      "plotUnit": "Parcel A - 1.00 Acre",
+      "plotAreaSqFt": 43560,
+      "priceFormatted": "₹4.13 Cr",
+      "userName": "Nasiha Banu",
+      "userEmail": "nasiha2305@gmail.com",
+      "userPhone": "8248139192",
+      "siteVisitDate": "2026-11-02",
+      "siteVisitTime": "10:30 AM",
+      "notes": "",
+      "bookingStatus": "Pending",
+      "adminDashboardUrl": "https://llbrealestate.com/admin/bookings/bk-914fad55",
+      "submittedAt": "2026-10-28T05:06:54.245Z"
+    },
+    "status": "delivered_to_n8n",
+    "response": {
+      "code": 200,
+      "executionId": "n8n-exec-1793164014325-2548",
+      "workflow": "Workflow C: Property Booking Confirmation (Customer + Admin)",
+      "status": "SUCCESS",
+      "executedActions": [
+        "📋 Generated Booking Reference: #LLB-PRD-2026-6320",
+        "📧 Dispatched Customer Confirmation Email to nasiha2305@gmail.com for Sunguvarchatram Logistics & Commercial Acreage (Parcel A - 1.00 Acre)",
+        "🚨 Dispatched Admin Immediate Alert to admin@llb.com / Parandur Site Director",
+        "🚗 Reserved Complimentary AC Chauffeur Vehicle for 2026-11-02"
+      ],
+      "completedAt": "2026-10-28T05:06:54.329Z"
+    },
+    "latencyMs": 86,
+    "httpStatus": 200
+  },
+  {
+    "id": "583df2a9-c6fc-4a6c-b503-07a4886a7104",
+    "workflow": "USER_REGISTRATION",
+    "webhookPath": "user-registration",
+    "targetUrl": "http://localhost:5678/webhook/user-registration",
+    "timestamp": "2026-10-27T10:04:55.367Z",
+    "payload": {
+      "userId": "usr-75735fe6",
+      "name": "Nasiha Banu",
+      "email": "nasiha2305@gmail.com",
+      "phone": "8248139192",
+      "role": "Ultra-HNI Investor",
+      "registrationSource": "Mobile App (iOS/Android)",
+      "registeredAt": "2026-10-27T10:04:55.362Z"
+    },
+    "status": "delivered_to_n8n",
+    "response": {
+      "code": 200,
+      "executionId": "exec-1793095495545-5628",
+      "workflow": "01_User_Registration_Welcome",
+      "status": "SUCCESS",
+      "executedActions": [
+        "📧 Dispatched Welcome Dossier to nasiha2305@gmail.com",
+        "🏛️ Added client 'Nasiha Banu' (Ultra-HNI Investor) to Luxury CRM",
+        "📱 Sent SMS confirmation via Gateway"
+      ],
+      "completedAt": "2026-10-27T10:04:55.561Z"
+    },
+    "latencyMs": 193,
+    "httpStatus": 200
+  },
+  {
+    "id": "7d74b593-4163-40d7-94e4-6c15ffec1b8b",
+    "workflow": "PRICE_ALERT",
+    "webhookPath": "price-alert",
+    "targetUrl": "http://localhost:5678/webhook/price-alert",
+    "timestamp": "2026-10-27T08:16:58.390Z",
+    "payload": {
+      "propertyId": "prop-land-01",
+      "propertyTitle": "Neelankarai Coastal Villa Plot",
+      "location": "Neelankarai, ECR, Chennai",
+      "oldPrice": "₹15.50 Cr",
+      "newPrice": "₹14.90 Cr (Special Diwali Window)",
+      "subscriberCount": 84,
+      "updatedAt": "2026-10-27T08:16:58.390Z"
+    },
+    "status": "delivered_to_n8n",
+    "response": {
+      "code": 200,
+      "executionId": "exec-1793089018393-2085",
+      "workflow": "05_Price_Alert_Broadcast",
+      "status": "SUCCESS",
+      "executedActions": [
+        "🏷️ Detected price movement for Neelankarai Coastal Villa Plot",
+        "📢 Broadcast push alerts dispatched to 84 interested investors"
+      ],
+      "completedAt": "2026-10-27T08:16:58.393Z"
+    },
+    "latencyMs": 4,
+    "httpStatus": 200
+  },
+  {
+    "id": "9607c823-9bd1-4c77-a065-dccb0e675490",
+    "workflow": "SCHEDULE_TOUR",
+    "webhookPath": "schedule-tour",
+    "targetUrl": "http://localhost:5678/webhook/schedule-tour",
+    "timestamp": "2026-10-27T08:16:58.381Z",
+    "payload": {
+      "propertyId": "prop-land-01",
+      "propertyTitle": "Neelankarai Coastal Villa Plot",
+      "clientName": "Vikramaditya Singhania",
+      "scheduledDate": "2026-11-02",
+      "scheduledTime": "11:00 AM",
+      "requireChauffeur": true,
+      "pickupAddress": "Taj Coromandel, Nungambakkam, Chennai"
+    },
+    "status": "delivered_to_n8n",
+    "response": {
+      "code": 200,
+      "executionId": "exec-1793089018382-5875",
+      "workflow": "04_Schedule_Tour_Chauffeur_Booking",
+      "status": "SUCCESS",
+      "executedActions": [
+        "🚗 VIP Chauffeur (Mercedes S-Class) reserved for 2026-11-02 11:00 AM",
+        "🎟️ Gate Security Pass generated: PASS-9821",
+        "📅 Google Calendar & Apple .ics invitation dispatched to undefined"
+      ],
+      "completedAt": "2026-10-27T08:16:58.382Z"
+    },
+    "latencyMs": 1,
+    "httpStatus": 200
+  },
+  {
+    "id": "60ac7736-4932-4f85-8dff-9ebc2216aec5",
+    "workflow": "PROPERTY_INQUIRY",
+    "webhookPath": "property-inquiry",
+    "targetUrl": "http://localhost:5678/webhook/property-inquiry",
+    "timestamp": "2026-10-27T08:16:58.367Z",
+    "payload": {
+      "propertyId": "prop-land-01",
+      "propertyTitle": "Neelankarai Coastal Villa Plot (₹15.50 Cr)",
+      "clientName": "Vikramaditya Singhania",
+      "clientEmail": "singhania@heritage-holdings.in",
+      "clientPhone": "+919940022334",
+      "vipLevel": "Tier 1 Ultra-HNI",
+      "message": "Requesting 40-year parent document scrutiny & survey map."
+    },
+    "status": "delivered_to_n8n",
+    "response": {
+      "code": 200,
+      "executionId": "exec-1793089018369-5112",
+      "workflow": "03_Property_VIP_Inquiry",
+      "status": "SUCCESS",
+      "executedActions": [
+        "💎 Priority Lead for 'Neelankarai Coastal Villa Plot (₹15.50 Cr)' routed to Senior Director",
+        "💬 Dispatched Telegram / Slack alert to VIP Desk",
+        "📑 Prepared PDF Title Scrutiny Dossier for client"
+      ],
+      "completedAt": "2026-10-27T08:16:58.369Z"
+    },
+    "latencyMs": 3,
+    "httpStatus": 200
+  },
+  {
+    "id": "3a5dad2e-0f37-4cfe-8d42-90fb5595f348",
+    "workflow": "AUTH_OTP_RESET",
+    "webhookPath": "auth-otp",
+    "targetUrl": "http://localhost:5678/webhook/auth-otp",
+    "timestamp": "2026-10-27T08:16:58.352Z",
+    "payload": {
+      "destination": "investor@llb.com",
+      "channel": "sms",
+      "otp": "582910",
+      "userId": "test-usr-999",
+      "userName": "Vikramaditya Singhania",
+      "purpose": "PASSWORD_RESET",
+      "requestedAt": "2026-10-27T08:16:58.352Z"
+    },
+    "status": "delivered_to_n8n",
+    "response": {
+      "code": 200,
+      "executionId": "exec-1793089018354-8482",
+      "workflow": "02_Auth_OTP_Password_Reset",
+      "status": "SUCCESS",
+      "executedActions": [
+        "🔐 High-security 6-digit OTP [582910] generated",
+        "📲 Dispatched via SMS to investor@llb.com",
+        "🛡️ Security audit record created with 10-minute expiry"
+      ],
+      "completedAt": "2026-10-27T08:16:58.354Z"
+    },
+    "latencyMs": 7,
+    "httpStatus": 200
+  },
+  {
+    "id": "6f6f7cf8-4a9c-4699-a3f4-1af55ba89df7",
+    "workflow": "USER_REGISTRATION",
+    "webhookPath": "user-registration",
+    "targetUrl": "http://localhost:5678/webhook/user-registration",
+    "timestamp": "2026-10-27T08:16:58.296Z",
+    "payload": {
+      "userId": "test-usr-999",
+      "name": "Vikramaditya Singhania",
+      "email": "singhania@heritage-holdings.in",
+      "phone": "+919940022334",
+      "role": "Ultra-HNI Investor",
+      "registrationSource": "Mobile App (iOS/Android)",
+      "registeredAt": "2026-10-27T08:16:58.296Z"
+    },
+    "status": "delivered_to_n8n",
+    "response": {
+      "code": 200,
+      "executionId": "exec-1793089018332-5226",
+      "workflow": "01_User_Registration_Welcome",
+      "status": "SUCCESS",
+      "executedActions": [
+        "📧 Dispatched Welcome Dossier to singhania@heritage-holdings.in",
+        "🏛️ Added client 'Vikramaditya Singhania' (Ultra-HNI Investor) to Luxury CRM",
+        "📱 Sent SMS confirmation via Gateway"
+      ],
+      "completedAt": "2026-10-27T08:16:58.333Z"
+    },
+    "latencyMs": 39,
+    "httpStatus": 200
+  },
+  {
+    "id": "eacb62e6-fba5-4f05-9fe4-62592b2d9463",
+    "workflow": "AUTH_OTP_RESET",
+    "webhookPath": "auth-otp",
+    "targetUrl": "http://localhost:5678/webhook/auth-otp",
+    "timestamp": "2026-10-27T07:46:26.732Z",
+    "payload": {
+      "destination": "+919876543210",
+      "channel": "sms",
+      "otp": "886216",
+      "userId": "usr-demo-01",
+      "userName": "Rajesh Kothari",
+      "purpose": "PASSWORD_RESET",
+      "requestedAt": "2026-10-27T07:46:26.732Z"
+    },
+    "status": "simulated_fallback",
+    "response": {
+      "success": true,
+      "workflowId": "n8n-flow-otp-reset-02",
+      "message": "OTP [886216] delivered via SMS to +919876543210",
+      "deliveryTrackingId": "MSG-MVQDTC2G",
+      "expiresInMinutes": 10,
+      "actionsExecuted": [
+        "High-security 6-digit cryptographic PIN generated",
+        "Dispatched via Gateway (SMS Gateway India)",
+        "Audit trail logged with IP & timestamp"
+      ]
+    },
+    "latencyMs": 44,
+    "simulated": true,
+    "errorReason": "ECONNREFUSED"
+  }
+]

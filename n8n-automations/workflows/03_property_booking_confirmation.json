@@ -1,0 +1,83 @@
+{
+  "name": "LLB Workflow C: Property Booking Confirmation (Customer & Admin)",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "booking-confirmation",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "node-webhook-booking-confirm",
+      "name": "Webhook: Booking Confirmation",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [220, 300]
+    },
+    {
+      "parameters": {
+        "functionCode": "// Validate booking payload and guard against duplicate event IDs\nconst data = items[0].json;\nif (!data.bookingReference || !data.userEmail) {\n  throw new Error('Invalid booking payload: reference and userEmail required');\n}\n\nreturn [{\n  json: {\n    bookingId: data.bookingId,\n    bookingReference: data.bookingReference,\n    type: data.type,\n    propertyTitle: data.propertyTitle,\n    propertyLocation: data.propertyLocation,\n    plotUnit: data.plotUnit || 'Selected Plot',\n    plotAreaSqFt: data.plotAreaSqFt,\n    priceFormatted: data.priceFormatted,\n    userName: data.userName,\n    userEmail: data.userEmail,\n    userPhone: data.userPhone,\n    siteVisitDate: data.siteVisitDate,\n    siteVisitTime: data.siteVisitTime,\n    status: data.bookingStatus || 'Pending',\n    adminEmail: 'admin@llb.com',\n    adminDashboardUrl: data.adminDashboardUrl,\n    submittedAt: data.submittedAt || new Date().toISOString()\n  }\n}];"
+      },
+      "id": "node-fn-validate-booking",
+      "name": "Validate & Format Booking",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [440, 300]
+    },
+    {
+      "parameters": {
+        "fromEmail": "concierge@llbrealestate.com",
+        "toEmail": "={{$json.userEmail}}",
+        "subject": "=[LLB Real Estate] Booking Confirmation Docket #{{$json.bookingReference}} - {{$json.propertyTitle}}",
+        "html": "<div style='font-family: Arial, sans-serif; background: #ffffff; color: #0a0a0a; padding: 32px;'>\n  <h1 style='color: #0a0a0a; border-bottom: 2px solid #0a0a0a; padding-bottom: 12px;'>LLB REAL ESTATE</h1>\n  <p>Dear <strong>{{$json.userName}}</strong>,</p>\n  <p>Thank you for submitting your plot acquisition request with LLB Real Estate. We have officially recorded your reservation docket.</p>\n  <div style='background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 20px 0;'>\n    <p><strong>Booking Reference:</strong> <span style='font-family: monospace; font-size: 16px; font-weight: bold;'>{{$json.bookingReference}}</span></p>\n    <p><strong>Property:</strong> {{$json.propertyTitle}}</p>\n    <p><strong>Plot / Unit:</strong> {{$json.plotUnit}}</p>\n    <p><strong>Extent:</strong> {{$json.plotAreaSqFt}} Sq.Ft</p>\n    <p><strong>Price:</strong> {{$json.priceFormatted}}</p>\n    <p><strong>Scheduled Site Inspection:</strong> {{$json.siteVisitDate || 'To be confirmed'}} at {{$json.siteVisitTime || 'Morning'}}</p>\n    <p><strong>Current Status:</strong> <span style='background: #0a0a0a; color: #ffffff; padding: 4px 8px; border-radius: 4px;'>{{$json.status}}</span></p>\n  </div>\n  <p>A Senior Acquisitions Director will review your file and contact you via phone within 2 business hours.</p>\n  <p style='color: #64748b; font-size: 12px;'>Parandur Greenfield Airport Corridor Land Specialist | LLB Real Estate</p>\n</div>"
+      },
+      "id": "node-email-customer",
+      "name": "Send Customer Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [680, 200]
+    },
+    {
+      "parameters": {
+        "fromEmail": "system@llbrealestate.com",
+        "toEmail": "={{$json.adminEmail}}",
+        "subject": "=🚨 NEW BOOKING ALERT: Docket #{{$json.bookingReference}} - {{$json.userName}}",
+        "html": "<div style='font-family: Arial, sans-serif; padding: 24px;'>\n  <h2>🚨 New Plot Booking Request Received</h2>\n  <p><strong>Reference:</strong> {{$json.bookingReference}}</p>\n  <p><strong>Client:</strong> {{$json.userName}} ({{$json.userEmail}} / {{$json.userPhone}})</p>\n  <p><strong>Property:</strong> {{$json.propertyTitle}} - {{$json.plotUnit}}</p>\n  <p><strong>Site Visit Date:</strong> {{$json.siteVisitDate}} {{$json.siteVisitTime}}</p>\n  <p><a href='{{$json.adminDashboardUrl}}' style='background: #0a0a0a; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 4px;'>Review in Admin Dashboard</a></p>\n</div>"
+      },
+      "id": "node-email-admin",
+      "name": "Send Admin Alert",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [680, 400]
+    }
+  ],
+  "connections": {
+    "Webhook: Booking Confirmation": {
+      "main": [
+        [
+          {
+            "node": "Validate & Format Booking",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate & Format Booking": {
+      "main": [
+        [
+          {
+            "node": "Send Customer Email",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Send Admin Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+:root {
+  --primary-emerald: #064E3B;
+  --primary-emerald-dark: #022C22;
+  --primary-emerald-light: #059669;
+  
+  --luxury-gold: #C5A880;
+  --luxury-gold-bright: #D4AF37;
+  --luxury-gold-dark: #9E7D42;
+  --luxury-gold-subtle: #FDF8F0;
+  --luxury-gold-border: rgba(197, 168, 128, 0.35);
+
+  --canvas-bg: #F8F9FA;
+  --surface-card: #FFFFFF;
+  --surface-elevated: #F1F5F9;
+  --border-subtle: #E2E8F0;
+  --border-card: #E5E7EB;
+
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+}
+
+* {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #FFFFFF;
+  color: #0F172A;
+  overflow-x: hidden;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+}
+
+.font-serif-luxury {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.04em;
+}
+
+.font-editorial {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Luxury Gradient Utilities */
+.bg-emerald-luxury {
+  background: linear-gradient(135deg, #064E3B 0%, #042F24 55%, #021B14 100%);
+}
+
+.bg-gold-luxury {
+  background: linear-gradient(135deg, #DFBA73 0%, #C5A880 50%, #A38249 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #DFBA73 0%, #C5A880 50%, #A38249 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold-subtle {
+  border: 1px solid rgba(197, 168, 128, 0.4);
+}
+
+.shadow-luxury-card {
+  box-shadow: 0 10px 30px -4px rgba(6, 78, 59, 0.06), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+}
+
+.shadow-emerald-glow {
+  box-shadow: 0 8px 24px -2px rgba(6, 78, 59, 0.25);
+}
+
+.shadow-gold-glow {
+  box-shadow: 0 8px 24px -2px rgba(197, 168, 128, 0.25);
+}
+
+/* Micro-press transitions */
+.active-press {
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s ease;
+}
+.active-press:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+.safe-bottom {
+  padding-bottom: max(6px, env(safe-area-inset-bottom));
+}
+
+.safe-top {
+  padding-top: max(8px, env(safe-area-inset-top));
+}
+
+/* Leaflet Custom Pin & Popup Styles */
+.leaflet-popup-content-wrapper {
+  border-radius: 18px !important;
+  padding: 6px !important;
+  box-shadow: 0 16px 36px rgba(6, 78, 59, 0.18) !important;
+  border: 1px solid rgba(197, 168, 128, 0.3) !important;
+}
+
+.leaflet-popup-content {
+  margin: 6px 8px !important;
+  line-height: 1.4 !important;
+}
+
+.leaflet-popup-tip {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15) !important;
+}

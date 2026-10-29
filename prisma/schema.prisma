@@ -1,0 +1,301 @@
+// Prisma Schema for LLB Real Estate Mobile Platform
+// Parandur Greenfield Airport Corridor Land & Plot Acquisitions
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  CUSTOMER
+  ADMIN
+  AGENT
+  INVESTOR
+}
+
+enum BookingType {
+  PLOT_BOOKING
+  SITE_VISIT
+  LEGAL_SCRUTINY
+}
+
+enum BookingStatus {
+  PENDING
+  UNDER_REVIEW
+  APPROVED
+  CONFIRMED
+  COMPLETED
+  REJECTED
+  CANCELLED
+  CANCELLATION_REQUESTED
+}
+
+enum PropertyType {
+  PLOT
+  LAND
+  COMMERCIAL
+  FARMLAND
+}
+
+enum PropertyStatus {
+  AVAILABLE
+  RESERVED
+  SOLD
+  UPCOMING
+}
+
+model User {
+  id                      String                   @id @default(uuid())
+  name                    String
+  email                   String?                  @unique
+  phone                   String?                  @unique
+  passwordHash            String
+  role                    Role                     @default(CUSTOMER)
+  verifiedEmail           Boolean                  @default(false)
+  verifiedPhone           Boolean                  @default(false)
+  createdAt               DateTime                 @default(now())
+  updatedAt               DateTime                 @updatedAt
+  lastLogin               DateTime?
+  
+  // Relations
+  refreshTokens           RefreshToken[]
+  emailVerificationTokens EmailVerificationToken[]
+  passwordResetTokens     PasswordResetToken[]
+  favourites              Favourite[]
+  enquiries               Enquiry[]
+  bookings                Booking[]
+  auditLogs               AuditLog[]
+
+  @@index([email])
+  @@index([phone])
+}
+
+model RefreshToken {
+  id        String   @id @default(uuid())
+  token     String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  revoked   Boolean  @default(false)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([token])
+  @@index([userId])
+}
+
+model EmailVerificationToken {
+  id        String   @id @default(uuid())
+  token     String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([token])
+  @@index([userId])
+}
+
+model PasswordResetToken {
+  id        String   @id @default(uuid())
+  token     String   @unique
+  otp       String
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  used      Boolean  @default(false)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([token])
+  @@index([userId])
+}
+
+model Property {
+  id                String             @id
+  title             String
+  subtitle          String?
+  category          String
+  type              PropertyType       @default(PLOT)
+  location          String
+  microMarket       String
+  latitude          Float
+  longitude         Float
+  distanceToAirport String
+  areaSqFt          Int
+  areaCents         Float
+  pricePerSqFt      Int
+  totalPrice        String
+  priceNumeric      BigInt
+  featured          Boolean            @default(false)
+  status            PropertyStatus     @default(AVAILABLE)
+  approvalAuthority String
+  reraNumber        String?
+  dtcpNumber        String?
+  roadWidth         String
+  facing            String
+  groundWater       String
+  electricity       String
+  availablePlots    Int
+  totalPlots        Int
+  plotsList         String[]
+  description       String             @db.Text
+  amenities         String[]
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+
+  // Relations
+  images            PropertyImage[]
+  documents         PropertyDocument[]
+  favourites        Favourite[]
+  enquiries         Enquiry[]
+  bookings          Booking[]
+
+  @@index([type])
+  @@index([status])
+  @@index([microMarket])
+  @@index([latitude, longitude])
+}
+
+model PropertyImage {
+  id         String   @id @default(uuid())
+  url        String
+  altText    String?
+  sortOrder  Int      @default(0)
+  propertyId String
+  property   Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+  createdAt  DateTime @default(now())
+
+  @@index([propertyId])
+}
+
+model PropertyDocument {
+  id         String   @id @default(uuid())
+  title      String
+  documentUrl String
+  docType    String
+  propertyId String
+  property   Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+  createdAt  DateTime @default(now())
+
+  @@index([propertyId])
+}
+
+model Favourite {
+  id         String   @id @default(uuid())
+  userId     String
+  propertyId String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  property   Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+  createdAt  DateTime @default(now())
+
+  @@unique([userId, propertyId])
+  @@index([userId])
+  @@index([propertyId])
+}
+
+model Enquiry {
+  id             String   @id @default(uuid())
+  propertyId     String
+  property       Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+  userId         String?
+  user           User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  clientName     String
+  clientEmail    String
+  clientPhone    String
+  message        String   @db.Text
+  status         String   @default("NEW")
+  createdAt      DateTime @default(now())
+
+  @@index([propertyId])
+  @@index([clientEmail])
+}
+
+model Booking {
+  id               String                 @id @default(uuid())
+  bookingReference String                 @unique
+  idempotencyKey   String?                @unique
+  type             BookingType            @default(PLOT_BOOKING)
+  status           BookingStatus          @default(PENDING)
+  propertyId       String
+  property         Property               @relation(fields: [propertyId], references: [id], onDelete: Restrict)
+  userId           String?
+  user             User?                  @relation(fields: [userId], references: [id], onDelete: SetNull)
+  plotUnit         String?
+  userName         String
+  userEmail        String
+  userPhone        String
+  siteVisitDate    String?
+  siteVisitTime    String?
+  notes            String?                @db.Text
+  cancellationReason String?              @db.Text
+  termsAccepted    Boolean                @default(true)
+  createdAt        DateTime               @default(now())
+  updatedAt        DateTime               @updatedAt
+
+  statusHistory    BookingStatusHistory[]
+
+  @@index([bookingReference])
+  @@index([userEmail])
+  @@index([propertyId])
+  @@index([status])
+}
+
+model BookingStatusHistory {
+  id          String        @id @default(uuid())
+  bookingId   String
+  booking     Booking       @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  fromStatus  BookingStatus
+  toStatus    BookingStatus
+  changedBy   String
+  notes       String?
+  createdAt   DateTime      @default(now())
+
+  @@index([bookingId])
+}
+
+model NotificationEvent {
+  id             String   @id @default(uuid())
+  workflowName   String
+  webhookPath    String
+  payload        Json
+  status         String   @default("DELIVERED")
+  httpStatus     Int?
+  latencyMs      Int?
+  response       Json?
+  createdAt      DateTime @default(now())
+
+  @@index([workflowName])
+  @@index([createdAt])
+}
+
+model AuditLog {
+  id         String   @id @default(uuid())
+  userId     String?
+  user       User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  action     String
+  entityType String
+  entityId   String
+  details    Json?
+  ipAddress  String?
+  createdAt  DateTime @default(now())
+
+  @@index([userId])
+  @@index([entityType, entityId])
+}
+
+model CompanyProfile {
+  id           String   @id @default("llb-company-profile")
+  name         String   @default("LLB Real Estate")
+  tagline      String   @default("Parandur Greenfield Airport Land & Plot Specialists")
+  headquarters String
+  siteOffice   String
+  phone        String
+  whatsapp     String
+  email        String
+  reraNumber   String
+  dtcpNumber   String
+  updatedAt    DateTime @updatedAt
+}

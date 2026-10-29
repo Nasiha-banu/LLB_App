@@ -1,0 +1,68 @@
+{
+  "workflow_A_user_registration": {
+    "userId": "usr-8a21fd90",
+    "name": "Karthik Subramanian",
+    "email": "karthik.subramanian@gmail.com",
+    "phone": "+919884123456",
+    "role": "CUSTOMER",
+    "registrationSource": "LLB Mobile App (iOS / Android)",
+    "registeredAt": "2026-10-27T10:00:00.000Z"
+  },
+  "workflow_B_password_reset": {
+    "destination": "karthik.subramanian@gmail.com",
+    "channel": "email",
+    "otp": "849201",
+    "resetToken": "f7813a48-1200-4822-a982-f81938b8120a",
+    "resetUrl": "https://llbrealestate.com/auth/reset?token=f7813a48-1200-4822-a982-f81938b8120a",
+    "userId": "usr-8a21fd90",
+    "userName": "Karthik Subramanian",
+    "purpose": "PASSWORD_RESET",
+    "requestedAt": "2026-10-27T10:05:00.000Z"
+  },
+  "workflow_C_booking_confirmation": {
+    "bookingId": "bk-912a77b1",
+    "bookingReference": "LLB-PRD-2026-4891",
+    "type": "PLOT_BOOKING",
+    "propertyId": "LLB-PRD-01",
+    "propertyTitle": "Parandur Airport City Phase 1",
+    "propertyLocation": "Parandur Airport North Gate Corridor, Kanchipuram - 631552",
+    "plotUnit": "Plot #15",
+    "plotAreaSqFt": 1500,
+    "priceFormatted": "₹21,75,000",
+    "userName": "Karthik Subramanian",
+    "userEmail": "karthik.subramanian@gmail.com",
+    "userPhone": "+919884123456",
+    "siteVisitDate": "2026-11-05",
+    "siteVisitTime": "10:30 AM",
+    "notes": "Interested in corner plot with Vaastu compliance.",
+    "bookingStatus": "Pending",
+    "adminDashboardUrl": "https://llbrealestate.com/admin/bookings/bk-912a77b1",
+    "submittedAt": "2026-10-27T10:10:00.000Z"
+  },
+  "workflow_D_booking_status_update": {
+    "bookingId": "bk-912a77b1",
+    "bookingReference": "LLB-PRD-2026-4891",
+    "previousStatus": "Pending",
+    "newStatus": "Approved",
+    "propertyTitle": "Parandur Airport City Phase 1",
+    "plotUnit": "Plot #15",
+    "userName": "Karthik Subramanian",
+    "userEmail": "karthik.subramanian@gmail.com",
+    "userPhone": "+919884123456",
+    "adminNotes": "Site inspection slot confirmed with chauffeur escort. Plot reserved for 48 hours.",
+    "updatedAt": "2026-10-27T10:15:00.000Z"
+  },
+  "workflow_E_site_visit_followup": {
+    "bookingId": "bk-912a77b1",
+    "bookingReference": "LLB-PRD-2026-4891",
+    "propertyTitle": "Parandur Airport City Phase 1",
+    "propertyLocation": "Parandur Airport North Gate Corridor, Kanchipuram - 631552",
+    "userName": "Karthik Subramanian",
+    "userEmail": "karthik.subramanian@gmail.com",
+    "userPhone": "+919884123456",
+    "siteVisitDate": "2026-11-05",
+    "siteVisitTime": "10:30 AM",
+    "officeContact": "+91 98840 99881",
+    "sentAt": "2026-11-04T10:30:00.000Z"
+  }
+}

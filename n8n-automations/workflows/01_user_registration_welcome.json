@@ -1,0 +1,113 @@
+{
+  "name": "01_LLB_User_Registration_Welcome",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "user-registration",
+        "responseMode": "onReceived",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "name": "Webhook: User Registered",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": false,
+        "values": {
+          "string": [
+            {
+              "name": "clientTier",
+              "value": "={{ $json.body.role === 'Ultra-HNI Investor' ? 'Sovereign Corridor Diamond' : 'Executive Investor' }}"
+            },
+            {
+              "name": "welcomeDossierUrl",
+              "value": "https://llbrealestate.com/dossiers/parandur-airport-corridor-2026.pdf"
+            },
+            {
+              "name": "advisorAssigned",
+              "value": "S. Lakshmanan (Managing Director, Parandur Land Desk)"
+            },
+            {
+              "name": "advisorPhone",
+              "value": "+91 94441 23456"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Enrich Lead Profile",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "fromEmail": "concierge@llbrealestate.com",
+        "toEmail": "={{ $json.body.email }}",
+        "subject": "✈️ Welcome to LLB Real Estate — Parandur Airport Corridor Investor Dossier",
+        "html": "=<div style='font-family:sans-serif;max-width:600px;margin:auto;padding:24px;border:1px solid #E2E8F0;border-radius:18px;'><div style='background:linear-gradient(135deg,#064E3B,#022C22);padding:24px;border-radius:14px;color:#fff;text-align:center;'><h1 style='margin:0;font-size:20px;letter-spacing:1px;color:#FDE68A;'>LLB REAL ESTATE</h1><p style='margin:4px 0 0;font-size:11px;color:#A7F3D0;'>Parandur Greenfield International Airport Corridor Specialists</p></div><div style='padding:20px 0;'><h2 style='color:#0F172A;font-size:16px;'>Welcome, {{ $json.body.name }}!</h2><p style='color:#475569;font-size:13px;line-height:1.6;'>Your investor account has been certified with <strong>{{ $json.clientTier }}</strong> status for high-yield acquisitions around the Parandur Greenfield International Airport Hub (4,791 Acres • ₹40,000 Cr Capex).</p><div style='background:#F8FAFC;padding:14px;border-radius:12px;margin:16px 0;border:1px solid #E2E8F0;'><p style='margin:0 0 6px;font-size:12px;color:#064E3B;font-weight:bold;'>🏛️ YOUR ASSIGNED ADVISORY DESK:</p><p style='margin:0;font-size:12px;color:#334155;'>Director: <strong>{{ $json.advisorAssigned }}</strong><br>Direct Phone / WhatsApp: <strong>{{ $json.advisorPhone }}</strong><br>Parandur Site Office: NH-48 Corridor, Sunguvarchatram</p></div><h3 style='font-size:13px;color:#0F172A;'>Included Privileges:</h3><ul style='color:#475569;font-size:12px;line-height:1.6;'><li>Complimentary AC Chauffeur Site Inspection (Toyota Innova Crysta pickup from MAA Airport).</li><li>Instant Plot Reservation with #LLB-PRD-2026 Docket generation.</li><li>100% DTCP & TN RERA sanctioned clear titles with 30-year certified EC.</li></ul><a href='http://localhost:3000' style='display:block;text-align:center;background:#064E3B;color:#fff;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:bold;font-size:13px;margin-top:20px;'>Explore Verified Parandur Plots &rarr;</a></div><div style='border-top:1px solid #E2E8F0;padding-top:14px;font-size:10px;color:#94A3B8;text-align:center;'>TN RERA Reg: TN/AGENT/0892/2024 • DTCP License: DTCP/REG/KPM/2023/104</div></div>"
+      },
+      "name": "Send Welcome SMTP Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [680, 200]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "application": "appRealEstateCRM",
+        "table": "Investors",
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ $json.body.name }}",
+            "Email": "={{ $json.body.email }}",
+            "Phone": "={{ $json.body.phone }}",
+            "Role": "={{ $json.body.role }}",
+            "Source": "LLB Mobile App",
+            "Tier": "={{ $json.clientTier }}"
+          }
+        }
+      },
+      "name": "Log to Real Estate CRM",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [680, 400]
+    }
+  ],
+  "connections": {
+    "Webhook: User Registered": {
+      "main": [
+        [
+          {
+            "node": "Enrich Lead Profile",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enrich Lead Profile": {
+      "main": [
+        [
+          {
+            "node": "Send Welcome SMTP Email",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Log to Real Estate CRM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {}
+}

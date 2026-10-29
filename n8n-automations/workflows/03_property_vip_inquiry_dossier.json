@@ -1,0 +1,59 @@
+{
+  "name": "03_LLB_Property_VIP_Inquiry_Dossier",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "property-inquiry",
+        "responseMode": "onReceived",
+        "responseData": "allEntries",
+        "options": {}
+      },
+      "name": "Webhook: Property Inquiry",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "chatId": "-100192837465",
+        "text": "=💎 *NEW VIP PROPERTY INQUIRY*\n━━━━━━━━━━━━━━━━━━━━\n🏠 *Estate:* {{ $json.body.propertyTitle }}\n👤 *Client:* {{ $json.body.clientName }}\n📞 *Phone:* {{ $json.body.clientPhone }}\n✉️ *Email:* {{ $json.body.clientEmail }}\n🏆 *Tier:* {{ $json.body.vipLevel }}\n💬 *Note:* {{ $json.body.message }}\n━━━━━━━━━━━━━━━━━━━━\n_Dispatched via LLB Mobile App n8n Pipeline_"
+      },
+      "name": "Telegram Alert to Senior Partner",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [480, 200]
+    },
+    {
+      "parameters": {
+        "fromEmail": "concierge@llbrealestate.com",
+        "toEmail": "={{ $json.body.clientEmail }}",
+        "subject": "=Exclusive Property Dossier: {{ $json.body.propertyTitle }}",
+        "html": "=<h3>Confidential Property Dossier</h3><p>Dear {{ $json.body.clientName }},</p><p>Thank you for expressing interest in <strong>{{ $json.body.propertyTitle }}</strong>.</p><p>Your dedicated Acquisitions Advisor, Siddharth Ramanathan, is reviewing your request. In the interim, please review our comprehensive due diligence packet and survey breakdown.</p>"
+      },
+      "name": "Email Dossier to Client",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [480, 400]
+    }
+  ],
+  "connections": {
+    "Webhook: Property Inquiry": {
+      "main": [
+        [
+          {
+            "node": "Telegram Alert to Senior Partner",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Email Dossier to Client",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true
+}

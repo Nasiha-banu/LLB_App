@@ -1,0 +1,62 @@
+[
+  {
+    "id": "usr-demo-01",
+    "name": "Rajesh Kothari",
+    "email": "investor@llb.com",
+    "phone": "+919876543210",
+    "passwordHash": "$2b$10$qJZLoWapwTK3mLYhTWUVFemnlXD/cTq.5cd9lWvzfI1tGM9zNJ8j6",
+    "role": "Ultra-HNI Investor",
+    "verifiedEmail": true,
+    "verifiedPhone": true,
+    "favorites": [
+      "prop-land-01",
+      "prop-villa-03"
+    ],
+    "createdAt": "2026-10-27T07:46:12.526Z",
+    "lastLogin": "2026-10-27T07:46:26.966Z",
+    "updatedAt": "2026-10-27T07:46:26.885Z"
+  },
+  {
+    "id": "usr-demo-02",
+    "name": "Dr. Ananya Sundaram",
+    "email": "buyer@chennai.com",
+    "phone": "+919840112233",
+    "passwordHash": "$2b$10$wWTImqLVUSCRmyPYN2S75uzBLPHfAdMhLIeXQT27VW3M7ljWlt.Dy",
+    "role": "Luxury Homebuyer",
+    "verifiedEmail": true,
+    "verifiedPhone": true,
+    "favorites": [
+      "prop-pent-01"
+    ],
+    "createdAt": "2026-10-27T07:46:12.598Z",
+    "lastLogin": "2026-10-27T07:46:12.598Z"
+  },
+  {
+    "id": "usr-75735fe6",
+    "name": "Nasiha Banu",
+    "email": "nasiha2305@gmail.com",
+    "phone": "8248139192",
+    "passwordHash": "$2b$10$uioJmazrgwgzHLY/yFDXfeqjXTwL7OZRzjMqPm8CtyMOO.bf6qd9e",
+    "role": "Ultra-HNI Investor",
+    "verifiedEmail": true,
+    "verifiedPhone": true,
+    "favorites": [],
+    "createdAt": "2026-10-27T10:04:55.362Z",
+    "lastLogin": "2026-10-28T09:43:34.294Z"
+  },
+  {
+    "id": "usr-3f4f2678",
+    "name": "Sivakumar Rajendran",
+    "email": "sivakumar.investor@parandur-lands.in",
+    "phone": "+919840192837",
+    "passwordHash": "$2b$10$Yfu7MU.8H4E23hPEp59Ep.2E2nqGi1ZZoCFtexdvnddWq22Xq/VyG",
+    "role": "CUSTOMER",
+    "verifiedEmail": false,
+    "verifiedPhone": true,
+    "favorites": [
+      "LLB-PRD-01"
+    ],
+    "createdAt": "2026-10-28T05:19:38.700Z",
+    "lastLogin": "2026-10-28T05:19:38.700Z"
+  }
+]
