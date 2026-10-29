@@ -1,15 +1,27 @@
 {
-  "version": 2,
-  "buildCommand": "cd mobile && npm install && npm run build",
-  "outputDirectory": "mobile/dist",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "backend": {
+      "root": "backend",
+      "framework": "express",
+      "entrypoint": "src/server.js"
+    },
+    "mobile": {
+      "root": "mobile"
+    }
+  },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/api/index.js"
+      "destination": {
+        "service": "backend"
+      }
     },
     {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": {
+        "service": "mobile"
+      }
     }
   ]
 }
